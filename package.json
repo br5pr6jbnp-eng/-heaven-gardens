@@ -1,0 +1,15 @@
+{
+  "name": "heaven-gardens",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "build": "tsc -p tsconfig.server.json && tsc -p tsconfig.client.json",
+    "start": "node --disable-warning=ExperimentalWarning dist/server/main.js",
+    "test": "npm run build && node --disable-warning=ExperimentalWarning --test \"dist/**/*.test.js\"",
+    "load": "node tools/load-test.mjs",
+    "data": "python3 tools/extract.py legacy/index.html"
+  },
+  "devDependencies": { "@types/node": "^22.10.0", "typescript": "^5.6.0" }
+}

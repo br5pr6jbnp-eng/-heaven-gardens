@@ -1,0 +1,1 @@
+{ "extends": "./tsconfig.base.json", "compilerOptions": { "outDir": "public/js", "rootDir": "src", "lib": ["ES2023", "DOM", "DOM.Iterable"], "types": [] }, "include": ["src/client/**/*.ts", "src/shared/**/*.ts"], "exclude": ["src/**/*.test.ts"] }
